@@ -9,8 +9,8 @@ plugins {
     id("androidx.navigation.safeargs.kotlin")
     id("kotlin-parcelize")
     id("com.google.protobuf") version "0.9.1"
-    id("com.google.gms.google-services")
-    id("com.google.firebase.crashlytics")
+    //id("com.google.gms.google-services")
+    //id("com.google.firebase.crashlytics")
     id("dev.shreyaspatil.compose-compiler-report-generator") version "1.1.0"
 }
 
