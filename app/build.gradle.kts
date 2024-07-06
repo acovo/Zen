@@ -22,12 +22,12 @@ android {
             keyAlias = gradleLocalProperties(rootDir)["KEY_ALIAS"] as String
             keyPassword = gradleLocalProperties(rootDir)["KEY_PASSWORD"] as String
         }
-        create("ir"){
+        /*create("ir"){
             storeFile = gradleLocalProperties(rootDir)["IR_STORE_FILE"]?.let { file(it) }
             storePassword = gradleLocalProperties(rootDir)["IR_STORE_PASSWORD"] as String
             keyAlias = gradleLocalProperties(rootDir)["IR_KEY_ALIAS"] as String
             keyPassword = gradleLocalProperties(rootDir)["IR_KEY_PASSWORD"] as String
-        }
+        }*/
     }
     namespace = "com.github.pakka_papad"
     compileSdk = Api.compileSdk
