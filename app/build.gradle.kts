@@ -17,10 +17,12 @@ plugins {
 android {
     signingConfigs {
         create("prod") {
-            storeFile = gradleLocalProperties(rootDir)["STORE_FILE"]?.let { file(it) }
-            storePassword = gradleLocalProperties(rootDir)["STORE_PASSWORD"] as String
-            keyAlias = gradleLocalProperties(rootDir)["KEY_ALIAS"] as String
-            keyPassword = gradleLocalProperties(rootDir)["KEY_PASSWORD"] as String
+            gradleLocalProperties(rootDir, providers).apply {
+                storeFile = getProperty("STORE_FILE")?.let{file(it)}
+                storePassword = getProperty("STORE_PASSWORD")
+                keyAlias = getProperty("KEY_ALIAS")
+                keyPassword = getProperty("KEY_PASSWORD")
+            }
         }
         /*create("ir"){
             storeFile = gradleLocalProperties(rootDir)["IR_STORE_FILE"]?.let { file(it) }
